@@ -1,0 +1,1473 @@
+# vsim -cvgperinstance -vopt -voptargs="+acc" -coverage -sva -c -do " log -r /* ;coverage save -onexit mem_cov4;run -all; exit" -wlf wave_file4.wlf -l test4.log -sv_seed random work.top "+UVM_TESTNAME=small_bad_test"
+# Start time: 17:22:04 on Aug 08,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vopt-143) Recognized 1 FSM in module "router_fsm(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1_2 linux_x86_64 Mar 28 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.router_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.router_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.router_if(fast__2)
+# Loading work.router_if(fast__3)
+# Loading work.router_top(fast)
+# Loading work.router_fsm(fast)
+# Loading work.router_sync(fast)
+# Loading work.router_reg(fast)
+# Loading work.router_fifo(fast)
+# Loading /home/cad/eda/MENTORGRAPHICS/Questasim/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# Sv_Seed = 2164806329
+#  log -r /*
+# Unable to lock WLF file "wave_file4.wlf". Retrying 1 times, errno 11
+# Unable to lock WLF file "wave_file4.wlf". Retrying 2 times, errno 11
+# Unable to lock WLF file "wave_file4.wlf". Retrying 3 times, errno 11
+# Cannot lock WLF file: "wave_file4.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: wave_file4.wlf
+#           File in use by: MManikandanR  Hostname: mavenserver-RH4  ProcessID: 2842086
+#           Attempting to use alternate WLF file "./wlft1SMqUg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: wave_file4.wlf
+#           Using alternate file: ./wlft1SMqUg
+# coverage save -onexit mem_cov4
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+#
+#   ***********       IMPORTANT RELEASE NOTES         ************
+#
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+#
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+#
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+#
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test small_bad_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 small_bad_test              -     @481
+#   env_h                      router_env                  -     @501
+#     ragt_top                 router_rd_agt_top           -     @516
+#       agt_h[0]               router_rd_agent             -     @644
+#         drv_h                router_rd_driver            -     @778
+#           rsp_port           uvm_analysis_port           -     @793
+#           seq_item_port      uvm_seq_item_pull_port      -     @785
+#         mon_h                router_rd_monitor           -     @801
+#           monitor_port       uvm_analysis_port           -     @808
+#         seqr_h               router_rd_sequencer         -     @669
+#           rsp_export         uvm_analysis_export         -     @676
+#           seq_item_export    uvm_seq_item_pull_imp       -     @770
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#       agt_h[1]               router_rd_agent             -     @652
+#         drv_h                router_rd_driver            -     @934
+#           rsp_port           uvm_analysis_port           -     @949
+#           seq_item_port      uvm_seq_item_pull_port      -     @941
+#         mon_h                router_rd_monitor           -     @957
+#           monitor_port       uvm_analysis_port           -     @964
+#         seqr_h               router_rd_sequencer         -     @825
+#           rsp_export         uvm_analysis_export         -     @832
+#           seq_item_export    uvm_seq_item_pull_imp       -     @926
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#       agt_h[2]               router_rd_agent             -     @660
+#         drv_h                router_rd_driver            -     @1090
+#           rsp_port           uvm_analysis_port           -     @1105
+#           seq_item_port      uvm_seq_item_pull_port      -     @1097
+#         mon_h                router_rd_monitor           -     @1113
+#           monitor_port       uvm_analysis_port           -     @1120
+#         seqr_h               router_rd_sequencer         -     @981
+#           rsp_export         uvm_analysis_export         -     @988
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1082
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     sb_h                     router_sb                   -     @523
+#       fifo_rdh[0]            uvm_tlm_analysis_fifo #(T)  -     @1136
+#         analysis_export      uvm_analysis_imp            -     @1175
+#         get_ap               uvm_analysis_port           -     @1167
+#         get_peek_export      uvm_get_peek_imp            -     @1151
+#         put_ap               uvm_analysis_port           -     @1159
+#         put_export           uvm_put_imp                 -     @1143
+#       fifo_rdh[1]            uvm_tlm_analysis_fifo #(T)  -     @1183
+#         analysis_export      uvm_analysis_imp            -     @1222
+#         get_ap               uvm_analysis_port           -     @1214
+#         get_peek_export      uvm_get_peek_imp            -     @1198
+#         put_ap               uvm_analysis_port           -     @1206
+#         put_export           uvm_put_imp                 -     @1190
+#       fifo_rdh[2]            uvm_tlm_analysis_fifo #(T)  -     @1230
+#         analysis_export      uvm_analysis_imp            -     @1269
+#         get_ap               uvm_analysis_port           -     @1261
+#         get_peek_export      uvm_get_peek_imp            -     @1245
+#         put_ap               uvm_analysis_port           -     @1253
+#         put_export           uvm_put_imp                 -     @1237
+#       fifo_wrh[0]            uvm_tlm_analysis_fifo #(T)  -     @1277
+#         analysis_export      uvm_analysis_imp            -     @1316
+#         get_ap               uvm_analysis_port           -     @1308
+#         get_peek_export      uvm_get_peek_imp            -     @1292
+#         put_ap               uvm_analysis_port           -     @1300
+#         put_export           uvm_put_imp                 -     @1284
+#     vseqr_h                  router_virtual_sequencer    -     @530
+#       rsp_export             uvm_analysis_export         -     @537
+#       seq_item_export        uvm_seq_item_pull_imp       -     @631
+#       arbitration_queue      array                       0     -
+#       lock_queue             array                       0     -
+#       num_last_reqs          integral                    32    'd1
+#       num_last_rsps          integral                    32    'd1
+#     wagt_top                 router_wr_agt_top           -     @509
+#       agt_h[0]               router_wr_agent             -     @1335
+#         drv_h                router_wr_driver            -     @1453
+#           rsp_port           uvm_analysis_port           -     @1468
+#           seq_item_port      uvm_seq_item_pull_port      -     @1460
+#         mon_h                router_wr_monitor           -     @1476
+#           monitor_port       uvm_analysis_port           -     @1483
+#         seqr_h               router_wr_sequencer         -     @1344
+#           rsp_export         uvm_analysis_export         -     @1351
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1445
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+# --------------------------------------------------------------------
+#
+# assertions is done for busy check
+# assertions is done for stable data
+# assertions is done for valid out
+# UVM_INFO ../rd_agt_top/router_rd_driver.sv(47) @ 115: uvm_test_top.env_h.ragt_top.agt_h[2].drv_h [ROUTER_RD_DRIVER] Data from rd_driver
+# -------------------------------
+# Name      Type      Size  Value
+# -------------------------------
+# req       read_xtn  -     @1551
+#   delay   integral  6     'd6
+#   header  integral  8     'd0
+#   parity  integral  8     'd0
+# -------------------------------
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# UVM_INFO ../wr_agt_top/router_wr_driver.sv(66) @ 145: uvm_test_top.env_h.wagt_top.agt_h[0].drv_h [ROUTER_WR_DRIVER] Data from wr_driver
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# req            write_xtn  -     @1547
+#   header       integral   8     'd46
+#   payload[0]   integral   8     'd75
+#   payload[1]   integral   8     159
+#   payload[2]   integral   8     195
+#   payload[3]   integral   8     'd64
+#   payload[4]   integral   8     'd25
+#   payload[5]   integral   8     'd28
+#   payload[6]   integral   8     134
+#   payload[7]   integral   8     139
+#   payload[8]   integral   8     190
+#   payload[9]   integral   8     243
+#   payload[10]  integral   8     142
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     'd0
+# -------------------------------------
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# UVM_INFO ../wr_agt_top/router_wr_monitor.sv(72) @ 175: uvm_test_top.env_h.wagt_top.agt_h[0].mon_h [ROUTER_WR_MONITOR] Data from wr_monitor
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1509
+#   header       integral   8     'd46
+#   payload[0]   integral   8     'd75
+#   payload[1]   integral   8     159
+#   payload[2]   integral   8     195
+#   payload[3]   integral   8     'd64
+#   payload[4]   integral   8     'd25
+#   payload[5]   integral   8     'd28
+#   payload[6]   integral   8     134
+#   payload[7]   integral   8     139
+#   payload[8]   integral   8     190
+#   payload[9]   integral   8     243
+#   payload[10]  integral   8     142
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# UVM_INFO ../tb/router_sb.sv(87) @ 175: uvm_test_top.env_h.sb_h [ROUTER_WR_SCOREBOARD] Data from wr_scoreboard
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1509
+#   header       integral   8     'd46
+#   payload[0]   integral   8     'd75
+#   payload[1]   integral   8     159
+#   payload[2]   integral   8     195
+#   payload[3]   integral   8     'd64
+#   payload[4]   integral   8     'd25
+#   payload[5]   integral   8     'd28
+#   payload[6]   integral   8     134
+#   payload[7]   integral   8     139
+#   payload[8]   integral   8     190
+#   payload[9]   integral   8     243
+#   payload[10]  integral   8     142
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# assertions is done for stable data
+# assertions is done for read en 2
+# assertions is done for stable data
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# UVM_INFO ../rd_agt_top/router_rd_monitor.sv(60) @ 275: uvm_test_top.env_h.ragt_top.agt_h[2].mon_h [ROUTER_RD_MONITOR] Data from rd_monitor
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1518
+#   delay        integral  6     'd0
+#   header       integral  8     'd46
+#   payload[0]   integral  8     'd75
+#   payload[1]   integral  8     159
+#   payload[2]   integral  8     195
+#   payload[3]   integral  8     'd64
+#   payload[4]   integral  8     'd25
+#   payload[5]   integral  8     'd28
+#   payload[6]   integral  8     134
+#   payload[7]   integral  8     139
+#   payload[8]   integral  8     190
+#   payload[9]   integral  8     243
+#   payload[10]  integral  8     142
+#   parity       integral  8     'd10
+# ------------------------------------
+# UVM_INFO ../tb/router_sb.sv(97) @ 275: uvm_test_top.env_h.sb_h [ROUTER_RD_SCOREBOARD] Data from rd_scoreboard
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1518
+#   delay        integral  6     'd0
+#   header       integral  8     'd46
+#   payload[0]   integral  8     'd75
+#   payload[1]   integral  8     159
+#   payload[2]   integral  8     195
+#   payload[3]   integral  8     'd64
+#   payload[4]   integral  8     'd25
+#   payload[5]   integral  8     'd28
+#   payload[6]   integral  8     134
+#   payload[7]   integral  8     139
+#   payload[8]   integral  8     190
+#   payload[9]   integral  8     243
+#   payload[10]  integral  8     142
+#   parity       integral  8     'd10
+# ------------------------------------
+# header matched
+# payload matched
+# parity matched
+# ---------------------------------------------------------------
+# UVM_INFO ../wr_agt_top/router_wr_driver.sv(66) @ 285: uvm_test_top.env_h.wagt_top.agt_h[0].drv_h [ROUTER_WR_DRIVER] Data from wr_driver
+# ------------------------------------
+# Name          Type       Size  Value
+# ------------------------------------
+# req           write_xtn  -     @1698
+#   header      integral   8     'd4
+#   payload[0]  integral   8     'd59
+#   parity      integral   8     'd10
+#   busy        integral   1     'd0
+#   error       integral   1     'd0
+# ------------------------------------
+# assertions is done for busy check
+# assertions is not done for stable data
+# assertions is done for valid out
+# assertions is done for stable data
+# UVM_INFO ../wr_agt_top/router_wr_monitor.sv(72) @ 325: uvm_test_top.env_h.wagt_top.agt_h[0].mon_h [ROUTER_WR_MONITOR] Data from wr_monitor
+# ------------------------------------
+# Name          Type       Size  Value
+# ------------------------------------
+# data_h        write_xtn  -     @1676
+#   header      integral   8     'd4
+#   payload[0]  integral   8     'd10
+#   parity      integral   8     'd10
+#   busy        integral   1     'd0
+#   error       integral   1     1
+# ------------------------------------
+# UVM_INFO ../tb/router_sb.sv(87) @ 325: uvm_test_top.env_h.sb_h [ROUTER_WR_SCOREBOARD] Data from wr_scoreboard
+# ------------------------------------
+# Name          Type       Size  Value
+# ------------------------------------
+# data_h        write_xtn  -     @1676
+#   header      integral   8     'd4
+#   payload[0]  integral   8     'd10
+#   parity      integral   8     'd10
+#   busy        integral   1     'd0
+#   error       integral   1     1
+# ------------------------------------
+# assertions is done for stable data
+# UVM_INFO ../rd_agt_top/router_rd_driver.sv(47) @ 485: uvm_test_top.env_h.ragt_top.agt_h[0].drv_h [ROUTER_RD_DRIVER] Data from rd_driver
+# -------------------------------
+# Name      Type      Size  Value
+# -------------------------------
+# req       read_xtn  -     @1702
+#   delay   integral  6     'd18
+#   header  integral  8     'd0
+#   parity  integral  8     'd0
+# -------------------------------
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# UVM_INFO ../rd_agt_top/router_rd_monitor.sv(60) @ 545: uvm_test_top.env_h.ragt_top.agt_h[0].mon_h [ROUTER_RD_MONITOR] Data from rd_monitor
+# -----------------------------------
+# Name          Type      Size  Value
+# -----------------------------------
+# data_h        read_xtn  -     @1530
+#   delay       integral  6     'd0
+#   header      integral  8     'd4
+#   payload[0]  integral  8     'd10
+#   parity      integral  8     'd0
+# -----------------------------------
+# UVM_INFO ../tb/router_sb.sv(97) @ 545: uvm_test_top.env_h.sb_h [ROUTER_RD_SCOREBOARD] Data from rd_scoreboard
+# -----------------------------------
+# Name          Type      Size  Value
+# -----------------------------------
+# data_h        read_xtn  -     @1530
+#   delay       integral  6     'd0
+#   header      integral  8     'd4
+#   payload[0]  integral  8     'd10
+#   parity      integral  8     'd0
+# -----------------------------------
+# header matched
+# payload matched
+# parity_not_matched
+# ---------------------------------------------------------------
+# assertions is done for busy check
+# assertions is done for stable data
+# assertions is done for valid out
+# UVM_INFO ../rd_agt_top/router_rd_driver.sv(47) @ 685: uvm_test_top.env_h.ragt_top.agt_h[1].drv_h [ROUTER_RD_DRIVER] Data from rd_driver
+# -------------------------------
+# Name      Type      Size  Value
+# -------------------------------
+# req       read_xtn  -     @1736
+#   delay   integral  6     'd12
+#   header  integral  8     'd0
+#   parity  integral  8     'd0
+# -------------------------------
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# UVM_INFO ../wr_agt_top/router_wr_driver.sv(66) @ 705: uvm_test_top.env_h.wagt_top.agt_h[0].drv_h [ROUTER_WR_DRIVER] Data from wr_driver
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# req            write_xtn  -     @1732
+#   header       integral   8     'd65
+#   payload[0]   integral   8     'd76
+#   payload[1]   integral   8     'd81
+#   payload[2]   integral   8     'd0
+#   payload[3]   integral   8     191
+#   payload[4]   integral   8     'd17
+#   payload[5]   integral   8     'd116
+#   payload[6]   integral   8     'd37
+#   payload[7]   integral   8     165
+#   payload[8]   integral   8     181
+#   payload[9]   integral   8     'd34
+#   payload[10]  integral   8     'd121
+#   payload[11]  integral   8     'd18
+#   payload[12]  integral   8     167
+#   payload[13]  integral   8     'd56
+#   payload[14]  integral   8     'd75
+#   payload[15]  integral   8     'd2
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     'd0
+# -------------------------------------
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# UVM_INFO ../wr_agt_top/router_wr_monitor.sv(72) @ 735: uvm_test_top.env_h.wagt_top.agt_h[0].mon_h [ROUTER_WR_MONITOR] Data from wr_monitor
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1711
+#   header       integral   8     'd65
+#   payload[0]   integral   8     'd76
+#   payload[1]   integral   8     'd81
+#   payload[2]   integral   8     'd0
+#   payload[3]   integral   8     191
+#   payload[4]   integral   8     'd17
+#   payload[5]   integral   8     'd116
+#   payload[6]   integral   8     'd37
+#   payload[7]   integral   8     165
+#   payload[8]   integral   8     181
+#   payload[9]   integral   8     'd34
+#   payload[10]  integral   8     'd121
+#   payload[11]  integral   8     'd18
+#   payload[12]  integral   8     167
+#   payload[13]  integral   8     'd56
+#   payload[14]  integral   8     'd75
+#   payload[15]  integral   8     'd2
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# UVM_INFO ../tb/router_sb.sv(87) @ 735: uvm_test_top.env_h.sb_h [ROUTER_WR_SCOREBOARD] Data from wr_scoreboard
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1711
+#   header       integral   8     'd65
+#   payload[0]   integral   8     'd76
+#   payload[1]   integral   8     'd81
+#   payload[2]   integral   8     'd0
+#   payload[3]   integral   8     191
+#   payload[4]   integral   8     'd17
+#   payload[5]   integral   8     'd116
+#   payload[6]   integral   8     'd37
+#   payload[7]   integral   8     165
+#   payload[8]   integral   8     181
+#   payload[9]   integral   8     'd34
+#   payload[10]  integral   8     'd121
+#   payload[11]  integral   8     'd18
+#   payload[12]  integral   8     167
+#   payload[13]  integral   8     'd56
+#   payload[14]  integral   8     'd75
+#   payload[15]  integral   8     'd2
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# assertions is done for stable data
+# assertions is done for read en 1
+# assertions is done for stable data
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# UVM_INFO ../rd_agt_top/router_rd_monitor.sv(60) @ 895: uvm_test_top.env_h.ragt_top.agt_h[1].mon_h [ROUTER_RD_MONITOR] Data from rd_monitor
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1524
+#   delay        integral  6     'd0
+#   header       integral  8     'd65
+#   payload[0]   integral  8     'd76
+#   payload[1]   integral  8     'd81
+#   payload[2]   integral  8     'd0
+#   payload[3]   integral  8     191
+#   payload[4]   integral  8     'd17
+#   payload[5]   integral  8     'd116
+#   payload[6]   integral  8     'd37
+#   payload[7]   integral  8     165
+#   payload[8]   integral  8     181
+#   payload[9]   integral  8     'd34
+#   payload[10]  integral  8     'd121
+#   payload[11]  integral  8     'd18
+#   payload[12]  integral  8     167
+#   payload[13]  integral  8     'd56
+#   payload[14]  integral  8     'd75
+#   payload[15]  integral  8     'd2
+#   parity       integral  8     'd10
+# ------------------------------------
+# UVM_INFO ../tb/router_sb.sv(97) @ 895: uvm_test_top.env_h.sb_h [ROUTER_RD_SCOREBOARD] Data from rd_scoreboard
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1524
+#   delay        integral  6     'd0
+#   header       integral  8     'd65
+#   payload[0]   integral  8     'd76
+#   payload[1]   integral  8     'd81
+#   payload[2]   integral  8     'd0
+#   payload[3]   integral  8     191
+#   payload[4]   integral  8     'd17
+#   payload[5]   integral  8     'd116
+#   payload[6]   integral  8     'd37
+#   payload[7]   integral  8     165
+#   payload[8]   integral  8     181
+#   payload[9]   integral  8     'd34
+#   payload[10]  integral  8     'd121
+#   payload[11]  integral  8     'd18
+#   payload[12]  integral  8     167
+#   payload[13]  integral  8     'd56
+#   payload[14]  integral  8     'd75
+#   payload[15]  integral  8     'd2
+#   parity       integral  8     'd10
+# ------------------------------------
+# header matched
+# payload matched
+# parity matched
+# ---------------------------------------------------------------
+# assertions is done for busy check
+# assertions is done for stable data
+# assertions is done for valid out
+# UVM_INFO ../wr_agt_top/router_wr_driver.sv(66) @ 1035: uvm_test_top.env_h.wagt_top.agt_h[0].drv_h [ROUTER_WR_DRIVER] Data from wr_driver
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# req            write_xtn  -     @1765
+#   header       integral   8     'd54
+#   payload[0]   integral   8     'd123
+#   payload[1]   integral   8     204
+#   payload[2]   integral   8     203
+#   payload[3]   integral   8     207
+#   payload[4]   integral   8     'd44
+#   payload[5]   integral   8     158
+#   payload[6]   integral   8     'd96
+#   payload[7]   integral   8     'd91
+#   payload[8]   integral   8     'd11
+#   payload[9]   integral   8     188
+#   payload[10]  integral   8     'd70
+#   payload[11]  integral   8     169
+#   payload[12]  integral   8     184
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     'd0
+# -------------------------------------
+# UVM_INFO ../wr_agt_top/router_wr_monitor.sv(72) @ 1065: uvm_test_top.env_h.wagt_top.agt_h[0].mon_h [ROUTER_WR_MONITOR] Data from wr_monitor
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1745
+#   header       integral   8     'd54
+#   payload[0]   integral   8     'd123
+#   payload[1]   integral   8     204
+#   payload[2]   integral   8     203
+#   payload[3]   integral   8     207
+#   payload[4]   integral   8     'd44
+#   payload[5]   integral   8     158
+#   payload[6]   integral   8     'd96
+#   payload[7]   integral   8     'd91
+#   payload[8]   integral   8     'd11
+#   payload[9]   integral   8     188
+#   payload[10]  integral   8     'd70
+#   payload[11]  integral   8     169
+#   payload[12]  integral   8     184
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# UVM_INFO ../tb/router_sb.sv(87) @ 1065: uvm_test_top.env_h.sb_h [ROUTER_WR_SCOREBOARD] Data from wr_scoreboard
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1745
+#   header       integral   8     'd54
+#   payload[0]   integral   8     'd123
+#   payload[1]   integral   8     204
+#   payload[2]   integral   8     203
+#   payload[3]   integral   8     207
+#   payload[4]   integral   8     'd44
+#   payload[5]   integral   8     158
+#   payload[6]   integral   8     'd96
+#   payload[7]   integral   8     'd91
+#   payload[8]   integral   8     'd11
+#   payload[9]   integral   8     188
+#   payload[10]  integral   8     'd70
+#   payload[11]  integral   8     169
+#   payload[12]  integral   8     184
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# assertions is done for stable data
+# assertions is done for stable data
+# UVM_INFO ../rd_agt_top/router_rd_driver.sv(47) @ 1125: uvm_test_top.env_h.ragt_top.agt_h[2].drv_h [ROUTER_RD_DRIVER] Data from rd_driver
+# -------------------------------
+# Name      Type      Size  Value
+# -------------------------------
+# req       read_xtn  -     @1769
+#   delay   integral  6     'd20
+#   header  integral  8     'd0
+#   parity  integral  8     'd0
+# -------------------------------
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# UVM_INFO ../rd_agt_top/router_rd_monitor.sv(60) @ 1305: uvm_test_top.env_h.ragt_top.agt_h[2].mon_h [ROUTER_RD_MONITOR] Data from rd_monitor
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1706
+#   delay        integral  6     'd0
+#   header       integral  8     'd54
+#   payload[0]   integral  8     'd123
+#   payload[1]   integral  8     204
+#   payload[2]   integral  8     203
+#   payload[3]   integral  8     207
+#   payload[4]   integral  8     'd44
+#   payload[5]   integral  8     158
+#   payload[6]   integral  8     'd96
+#   payload[7]   integral  8     'd91
+#   payload[8]   integral  8     'd11
+#   payload[9]   integral  8     188
+#   payload[10]  integral  8     'd70
+#   payload[11]  integral  8     169
+#   payload[12]  integral  8     184
+#   parity       integral  8     'd10
+# ------------------------------------
+# UVM_INFO ../tb/router_sb.sv(97) @ 1305: uvm_test_top.env_h.sb_h [ROUTER_RD_SCOREBOARD] Data from rd_scoreboard
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1706
+#   delay        integral  6     'd0
+#   header       integral  8     'd54
+#   payload[0]   integral  8     'd123
+#   payload[1]   integral  8     204
+#   payload[2]   integral  8     203
+#   payload[3]   integral  8     207
+#   payload[4]   integral  8     'd44
+#   payload[5]   integral  8     158
+#   payload[6]   integral  8     'd96
+#   payload[7]   integral  8     'd91
+#   payload[8]   integral  8     'd11
+#   payload[9]   integral  8     188
+#   payload[10]  integral  8     'd70
+#   payload[11]  integral  8     169
+#   payload[12]  integral  8     184
+#   parity       integral  8     'd10
+# ------------------------------------
+# header matched
+# payload matched
+# parity matched
+# ---------------------------------------------------------------
+# assertions is done for busy check
+# assertions is done for stable data
+# assertions is done for valid out
+# UVM_INFO ../rd_agt_top/router_rd_driver.sv(47) @ 1375: uvm_test_top.env_h.ragt_top.agt_h[0].drv_h [ROUTER_RD_DRIVER] Data from rd_driver
+# -------------------------------
+# Name      Type      Size  Value
+# -------------------------------
+# req       read_xtn  -     @1801
+#   delay   integral  6     'd4
+#   header  integral  8     'd0
+#   parity  integral  8     'd0
+# -------------------------------
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# UVM_INFO ../wr_agt_top/router_wr_driver.sv(66) @ 1465: uvm_test_top.env_h.wagt_top.agt_h[0].drv_h [ROUTER_WR_DRIVER] Data from wr_driver
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# req            write_xtn  -     @1797
+#   header       integral   8     'd60
+#   payload[0]   integral   8     'd47
+#   payload[1]   integral   8     157
+#   payload[2]   integral   8     196
+#   payload[3]   integral   8     'd14
+#   payload[4]   integral   8     146
+#   payload[5]   integral   8     'd44
+#   payload[6]   integral   8     'd34
+#   payload[7]   integral   8     'd102
+#   payload[8]   integral   8     160
+#   payload[9]   integral   8     241
+#   payload[10]  integral   8     143
+#   payload[11]  integral   8     'd120
+#   payload[12]  integral   8     'd9
+#   payload[13]  integral   8     161
+#   payload[14]  integral   8     231
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     'd0
+# -------------------------------------
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# UVM_INFO ../wr_agt_top/router_wr_monitor.sv(72) @ 1495: uvm_test_top.env_h.wagt_top.agt_h[0].mon_h [ROUTER_WR_MONITOR] Data from wr_monitor
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1778
+#   header       integral   8     'd60
+#   payload[0]   integral   8     'd47
+#   payload[1]   integral   8     157
+#   payload[2]   integral   8     196
+#   payload[3]   integral   8     'd14
+#   payload[4]   integral   8     146
+#   payload[5]   integral   8     'd44
+#   payload[6]   integral   8     'd34
+#   payload[7]   integral   8     'd102
+#   payload[8]   integral   8     160
+#   payload[9]   integral   8     241
+#   payload[10]  integral   8     143
+#   payload[11]  integral   8     'd120
+#   payload[12]  integral   8     'd9
+#   payload[13]  integral   8     161
+#   payload[14]  integral   8     231
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# UVM_INFO ../tb/router_sb.sv(87) @ 1495: uvm_test_top.env_h.sb_h [ROUTER_WR_SCOREBOARD] Data from wr_scoreboard
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1778
+#   header       integral   8     'd60
+#   payload[0]   integral   8     'd47
+#   payload[1]   integral   8     157
+#   payload[2]   integral   8     196
+#   payload[3]   integral   8     'd14
+#   payload[4]   integral   8     146
+#   payload[5]   integral   8     'd44
+#   payload[6]   integral   8     'd34
+#   payload[7]   integral   8     'd102
+#   payload[8]   integral   8     160
+#   payload[9]   integral   8     241
+#   payload[10]  integral   8     143
+#   payload[11]  integral   8     'd120
+#   payload[12]  integral   8     'd9
+#   payload[13]  integral   8     161
+#   payload[14]  integral   8     231
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# assertions is done for stable data
+# assertions is done for read en 0
+# assertions is done for stable data
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# assertions is done for read en 0
+# UVM_INFO ../rd_agt_top/router_rd_monitor.sv(60) @ 1575: uvm_test_top.env_h.ragt_top.agt_h[0].mon_h [ROUTER_RD_MONITOR] Data from rd_monitor
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1740
+#   delay        integral  6     'd0
+#   header       integral  8     'd60
+#   payload[0]   integral  8     'd47
+#   payload[1]   integral  8     157
+#   payload[2]   integral  8     196
+#   payload[3]   integral  8     'd14
+#   payload[4]   integral  8     146
+#   payload[5]   integral  8     'd44
+#   payload[6]   integral  8     'd34
+#   payload[7]   integral  8     'd102
+#   payload[8]   integral  8     160
+#   payload[9]   integral  8     241
+#   payload[10]  integral  8     143
+#   payload[11]  integral  8     'd120
+#   payload[12]  integral  8     'd9
+#   payload[13]  integral  8     161
+#   payload[14]  integral  8     231
+#   parity       integral  8     'd10
+# ------------------------------------
+# UVM_INFO ../tb/router_sb.sv(97) @ 1575: uvm_test_top.env_h.sb_h [ROUTER_RD_SCOREBOARD] Data from rd_scoreboard
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1740
+#   delay        integral  6     'd0
+#   header       integral  8     'd60
+#   payload[0]   integral  8     'd47
+#   payload[1]   integral  8     157
+#   payload[2]   integral  8     196
+#   payload[3]   integral  8     'd14
+#   payload[4]   integral  8     146
+#   payload[5]   integral  8     'd44
+#   payload[6]   integral  8     'd34
+#   payload[7]   integral  8     'd102
+#   payload[8]   integral  8     160
+#   payload[9]   integral  8     241
+#   payload[10]  integral  8     143
+#   payload[11]  integral  8     'd120
+#   payload[12]  integral  8     'd9
+#   payload[13]  integral  8     161
+#   payload[14]  integral  8     231
+#   parity       integral  8     'd10
+# ------------------------------------
+# header matched
+# payload matched
+# parity matched
+# ---------------------------------------------------------------
+# assertions is done for busy check
+# assertions is done for stable data
+# assertions is done for valid out
+# UVM_INFO ../wr_agt_top/router_wr_driver.sv(66) @ 1735: uvm_test_top.env_h.wagt_top.agt_h[0].drv_h [ROUTER_WR_DRIVER] Data from wr_driver
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# req            write_xtn  -     @1829
+#   header       integral   8     'd62
+#   payload[0]   integral   8     168
+#   payload[1]   integral   8     150
+#   payload[2]   integral   8     'd47
+#   payload[3]   integral   8     211
+#   payload[4]   integral   8     'd74
+#   payload[5]   integral   8     212
+#   payload[6]   integral   8     229
+#   payload[7]   integral   8     'd66
+#   payload[8]   integral   8     169
+#   payload[9]   integral   8     'd79
+#   payload[10]  integral   8     'd3
+#   payload[11]  integral   8     'd94
+#   payload[12]  integral   8     'd107
+#   payload[13]  integral   8     'd95
+#   payload[14]  integral   8     'd20
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     'd0
+# -------------------------------------
+# UVM_INFO ../wr_agt_top/router_wr_monitor.sv(72) @ 1765: uvm_test_top.env_h.wagt_top.agt_h[0].mon_h [ROUTER_WR_MONITOR] Data from wr_monitor
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1810
+#   header       integral   8     'd62
+#   payload[0]   integral   8     168
+#   payload[1]   integral   8     150
+#   payload[2]   integral   8     'd47
+#   payload[3]   integral   8     211
+#   payload[4]   integral   8     'd74
+#   payload[5]   integral   8     212
+#   payload[6]   integral   8     229
+#   payload[7]   integral   8     'd66
+#   payload[8]   integral   8     169
+#   payload[9]   integral   8     'd79
+#   payload[10]  integral   8     'd3
+#   payload[11]  integral   8     'd94
+#   payload[12]  integral   8     'd107
+#   payload[13]  integral   8     'd95
+#   payload[14]  integral   8     'd20
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# UVM_INFO ../tb/router_sb.sv(87) @ 1765: uvm_test_top.env_h.sb_h [ROUTER_WR_SCOREBOARD] Data from wr_scoreboard
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1810
+#   header       integral   8     'd62
+#   payload[0]   integral   8     168
+#   payload[1]   integral   8     150
+#   payload[2]   integral   8     'd47
+#   payload[3]   integral   8     211
+#   payload[4]   integral   8     'd74
+#   payload[5]   integral   8     212
+#   payload[6]   integral   8     229
+#   payload[7]   integral   8     'd66
+#   payload[8]   integral   8     169
+#   payload[9]   integral   8     'd79
+#   payload[10]  integral   8     'd3
+#   payload[11]  integral   8     'd94
+#   payload[12]  integral   8     'd107
+#   payload[13]  integral   8     'd95
+#   payload[14]  integral   8     'd20
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# assertions is done for stable data
+# assertions is done for stable data
+# assertions is done for stable data
+# assertions is done for stable data
+# assertions is done for stable data
+# UVM_INFO ../rd_agt_top/router_rd_driver.sv(47) @ 1815: uvm_test_top.env_h.ragt_top.agt_h[2].drv_h [ROUTER_RD_DRIVER] Data from rd_driver
+# -------------------------------
+# Name      Type      Size  Value
+# -------------------------------
+# req       read_xtn  -     @1833
+#   delay   integral  6     'd21
+#   header  integral  8     'd0
+#   parity  integral  8     'd0
+# -------------------------------
+# assertions is done for stable data
+# assertions is done for stable data
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for stable data
+# assertions is done for read en 2
+# assertions is done for stable data
+# assertions is done for read en 2
+# assertions is done for stable data
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# UVM_INFO ../rd_agt_top/router_rd_monitor.sv(60) @ 2015: uvm_test_top.env_h.ragt_top.agt_h[2].mon_h [ROUTER_RD_MONITOR] Data from rd_monitor
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1805
+#   delay        integral  6     'd0
+#   header       integral  8     'd62
+#   payload[0]   integral  8     168
+#   payload[1]   integral  8     150
+#   payload[2]   integral  8     'd47
+#   payload[3]   integral  8     211
+#   payload[4]   integral  8     'd74
+#   payload[5]   integral  8     212
+#   payload[6]   integral  8     229
+#   payload[7]   integral  8     'd66
+#   payload[8]   integral  8     169
+#   payload[9]   integral  8     'd79
+#   payload[10]  integral  8     'd3
+#   payload[11]  integral  8     'd94
+#   payload[12]  integral  8     'd107
+#   payload[13]  integral  8     'd95
+#   payload[14]  integral  8     'd20
+#   parity       integral  8     'd10
+# ------------------------------------
+# UVM_INFO ../tb/router_sb.sv(97) @ 2015: uvm_test_top.env_h.sb_h [ROUTER_RD_SCOREBOARD] Data from rd_scoreboard
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1805
+#   delay        integral  6     'd0
+#   header       integral  8     'd62
+#   payload[0]   integral  8     168
+#   payload[1]   integral  8     150
+#   payload[2]   integral  8     'd47
+#   payload[3]   integral  8     211
+#   payload[4]   integral  8     'd74
+#   payload[5]   integral  8     212
+#   payload[6]   integral  8     229
+#   payload[7]   integral  8     'd66
+#   payload[8]   integral  8     169
+#   payload[9]   integral  8     'd79
+#   payload[10]  integral  8     'd3
+#   payload[11]  integral  8     'd94
+#   payload[12]  integral  8     'd107
+#   payload[13]  integral  8     'd95
+#   payload[14]  integral  8     'd20
+#   parity       integral  8     'd10
+# ------------------------------------
+# header matched
+# payload matched
+# parity matched
+# ---------------------------------------------------------------
+# assertions is done for busy check
+# assertions is done for stable data
+# assertions is done for valid out
+# UVM_INFO ../rd_agt_top/router_rd_driver.sv(47) @ 2135: uvm_test_top.env_h.ragt_top.agt_h[2].drv_h [ROUTER_RD_DRIVER] Data from rd_driver
+# -------------------------------
+# Name      Type      Size  Value
+# -------------------------------
+# req       read_xtn  -     @1865
+#   delay   integral  6     'd9
+#   header  integral  8     'd0
+#   parity  integral  8     'd0
+# -------------------------------
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# UVM_INFO ../wr_agt_top/router_wr_driver.sv(66) @ 2205: uvm_test_top.env_h.wagt_top.agt_h[0].drv_h [ROUTER_WR_DRIVER] Data from wr_driver
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# req            write_xtn  -     @1861
+#   header       integral   8     'd74
+#   payload[0]   integral   8     215
+#   payload[1]   integral   8     199
+#   payload[2]   integral   8     'd70
+#   payload[3]   integral   8     'd59
+#   payload[4]   integral   8     176
+#   payload[5]   integral   8     'd7
+#   payload[6]   integral   8     'd80
+#   payload[7]   integral   8     236
+#   payload[8]   integral   8     245
+#   payload[9]   integral   8     'd53
+#   payload[10]  integral   8     'd79
+#   payload[11]  integral   8     155
+#   payload[12]  integral   8     'd26
+#   payload[13]  integral   8     211
+#   payload[14]  integral   8     152
+#   payload[15]  integral   8     'd20
+#   payload[16]  integral   8     175
+#   payload[17]  integral   8     183
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     'd0
+# -------------------------------------
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# UVM_INFO ../wr_agt_top/router_wr_monitor.sv(72) @ 2235: uvm_test_top.env_h.wagt_top.agt_h[0].mon_h [ROUTER_WR_MONITOR] Data from wr_monitor
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1842
+#   header       integral   8     'd74
+#   payload[0]   integral   8     215
+#   payload[1]   integral   8     199
+#   payload[2]   integral   8     'd70
+#   payload[3]   integral   8     'd59
+#   payload[4]   integral   8     176
+#   payload[5]   integral   8     'd7
+#   payload[6]   integral   8     'd80
+#   payload[7]   integral   8     236
+#   payload[8]   integral   8     245
+#   payload[9]   integral   8     'd53
+#   payload[10]  integral   8     'd79
+#   payload[11]  integral   8     155
+#   payload[12]  integral   8     'd26
+#   payload[13]  integral   8     211
+#   payload[14]  integral   8     152
+#   payload[15]  integral   8     'd20
+#   payload[16]  integral   8     175
+#   payload[17]  integral   8     183
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# UVM_INFO ../tb/router_sb.sv(87) @ 2235: uvm_test_top.env_h.sb_h [ROUTER_WR_SCOREBOARD] Data from wr_scoreboard
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1842
+#   header       integral   8     'd74
+#   payload[0]   integral   8     215
+#   payload[1]   integral   8     199
+#   payload[2]   integral   8     'd70
+#   payload[3]   integral   8     'd59
+#   payload[4]   integral   8     176
+#   payload[5]   integral   8     'd7
+#   payload[6]   integral   8     'd80
+#   payload[7]   integral   8     236
+#   payload[8]   integral   8     245
+#   payload[9]   integral   8     'd53
+#   payload[10]  integral   8     'd79
+#   payload[11]  integral   8     155
+#   payload[12]  integral   8     'd26
+#   payload[13]  integral   8     211
+#   payload[14]  integral   8     152
+#   payload[15]  integral   8     'd20
+#   payload[16]  integral   8     175
+#   payload[17]  integral   8     183
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# assertions is done for stable data
+# assertions is done for read en 2
+# assertions is done for stable data
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# assertions is done for read en 2
+# UVM_INFO ../rd_agt_top/router_rd_monitor.sv(60) @ 2365: uvm_test_top.env_h.ragt_top.agt_h[2].mon_h [ROUTER_RD_MONITOR] Data from rd_monitor
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1869
+#   delay        integral  6     'd0
+#   header       integral  8     'd74
+#   payload[0]   integral  8     215
+#   payload[1]   integral  8     199
+#   payload[2]   integral  8     'd70
+#   payload[3]   integral  8     'd59
+#   payload[4]   integral  8     176
+#   payload[5]   integral  8     'd7
+#   payload[6]   integral  8     'd80
+#   payload[7]   integral  8     236
+#   payload[8]   integral  8     245
+#   payload[9]   integral  8     'd53
+#   payload[10]  integral  8     'd79
+#   payload[11]  integral  8     155
+#   payload[12]  integral  8     'd26
+#   payload[13]  integral  8     211
+#   payload[14]  integral  8     152
+#   payload[15]  integral  8     'd20
+#   payload[16]  integral  8     175
+#   payload[17]  integral  8     183
+#   parity       integral  8     'd10
+# ------------------------------------
+# UVM_INFO ../tb/router_sb.sv(97) @ 2365: uvm_test_top.env_h.sb_h [ROUTER_RD_SCOREBOARD] Data from rd_scoreboard
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1869
+#   delay        integral  6     'd0
+#   header       integral  8     'd74
+#   payload[0]   integral  8     215
+#   payload[1]   integral  8     199
+#   payload[2]   integral  8     'd70
+#   payload[3]   integral  8     'd59
+#   payload[4]   integral  8     176
+#   payload[5]   integral  8     'd7
+#   payload[6]   integral  8     'd80
+#   payload[7]   integral  8     236
+#   payload[8]   integral  8     245
+#   payload[9]   integral  8     'd53
+#   payload[10]  integral  8     'd79
+#   payload[11]  integral  8     155
+#   payload[12]  integral  8     'd26
+#   payload[13]  integral  8     211
+#   payload[14]  integral  8     152
+#   payload[15]  integral  8     'd20
+#   payload[16]  integral  8     175
+#   payload[17]  integral  8     183
+#   parity       integral  8     'd10
+# ------------------------------------
+# header matched
+# payload matched
+# parity matched
+# ---------------------------------------------------------------
+# assertions is done for busy check
+# assertions is done for stable data
+# assertions is done for valid out
+# UVM_INFO ../wr_agt_top/router_wr_driver.sv(66) @ 2495: uvm_test_top.env_h.wagt_top.agt_h[0].drv_h [ROUTER_WR_DRIVER] Data from wr_driver
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# req            write_xtn  -     @1893
+#   header       integral   8     'd49
+#   payload[0]   integral   8     'd15
+#   payload[1]   integral   8     194
+#   payload[2]   integral   8     177
+#   payload[3]   integral   8     'd27
+#   payload[4]   integral   8     'd25
+#   payload[5]   integral   8     155
+#   payload[6]   integral   8     'd20
+#   payload[7]   integral   8     244
+#   payload[8]   integral   8     189
+#   payload[9]   integral   8     'd67
+#   payload[10]  integral   8     245
+#   payload[11]  integral   8     'd51
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     'd0
+# -------------------------------------
+# UVM_INFO ../wr_agt_top/router_wr_monitor.sv(72) @ 2525: uvm_test_top.env_h.wagt_top.agt_h[0].mon_h [ROUTER_WR_MONITOR] Data from wr_monitor
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1874
+#   header       integral   8     'd49
+#   payload[0]   integral   8     'd15
+#   payload[1]   integral   8     194
+#   payload[2]   integral   8     177
+#   payload[3]   integral   8     'd27
+#   payload[4]   integral   8     'd25
+#   payload[5]   integral   8     155
+#   payload[6]   integral   8     'd20
+#   payload[7]   integral   8     244
+#   payload[8]   integral   8     189
+#   payload[9]   integral   8     'd67
+#   payload[10]  integral   8     245
+#   payload[11]  integral   8     'd51
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# UVM_INFO ../tb/router_sb.sv(87) @ 2525: uvm_test_top.env_h.sb_h [ROUTER_WR_SCOREBOARD] Data from wr_scoreboard
+# -------------------------------------
+# Name           Type       Size  Value
+# -------------------------------------
+# data_h         write_xtn  -     @1874
+#   header       integral   8     'd49
+#   payload[0]   integral   8     'd15
+#   payload[1]   integral   8     194
+#   payload[2]   integral   8     177
+#   payload[3]   integral   8     'd27
+#   payload[4]   integral   8     'd25
+#   payload[5]   integral   8     155
+#   payload[6]   integral   8     'd20
+#   payload[7]   integral   8     244
+#   payload[8]   integral   8     189
+#   payload[9]   integral   8     'd67
+#   payload[10]  integral   8     245
+#   payload[11]  integral   8     'd51
+#   parity       integral   8     'd10
+#   busy         integral   1     'd0
+#   error        integral   1     1
+# -------------------------------------
+# assertions is done for stable data
+# assertions is done for stable data
+# UVM_INFO ../rd_agt_top/router_rd_driver.sv(47) @ 2645: uvm_test_top.env_h.ragt_top.agt_h[1].drv_h [ROUTER_RD_DRIVER] Data from rd_driver
+# -------------------------------
+# Name      Type      Size  Value
+# -------------------------------
+# req       read_xtn  -     @1897
+#   delay   integral  6     'd25
+#   header  integral  8     'd0
+#   parity  integral  8     'd0
+# -------------------------------
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# assertions is done for read en 1
+# UVM_INFO ../rd_agt_top/router_rd_monitor.sv(60) @ 2815: uvm_test_top.env_h.ragt_top.agt_h[1].mon_h [ROUTER_RD_MONITOR] Data from rd_monitor
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1773
+#   delay        integral  6     'd0
+#   header       integral  8     'd49
+#   payload[0]   integral  8     'd15
+#   payload[1]   integral  8     194
+#   payload[2]   integral  8     177
+#   payload[3]   integral  8     'd27
+#   payload[4]   integral  8     'd25
+#   payload[5]   integral  8     155
+#   payload[6]   integral  8     'd20
+#   payload[7]   integral  8     244
+#   payload[8]   integral  8     189
+#   payload[9]   integral  8     'd67
+#   payload[10]  integral  8     245
+#   payload[11]  integral  8     'd51
+#   parity       integral  8     'd10
+# ------------------------------------
+# UVM_INFO ../tb/router_sb.sv(97) @ 2815: uvm_test_top.env_h.sb_h [ROUTER_RD_SCOREBOARD] Data from rd_scoreboard
+# ------------------------------------
+# Name           Type      Size  Value
+# ------------------------------------
+# data_h         read_xtn  -     @1773
+#   delay        integral  6     'd0
+#   header       integral  8     'd49
+#   payload[0]   integral  8     'd15
+#   payload[1]   integral  8     194
+#   payload[2]   integral  8     177
+#   payload[3]   integral  8     'd27
+#   payload[4]   integral  8     'd25
+#   payload[5]   integral  8     155
+#   payload[6]   integral  8     'd20
+#   payload[7]   integral  8     244
+#   payload[8]   integral  8     189
+#   payload[9]   integral  8     'd67
+#   payload[10]  integral  8     245
+#   payload[11]  integral  8     'd51
+#   parity       integral  8     'd10
+# ------------------------------------
+# header matched
+# payload matched
+# parity matched
+# ---------------------------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 2905: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   53
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [ROUTER_RD_DRIVER]     8
+# [ROUTER_RD_MONITOR]     8
+# [ROUTER_RD_SCOREBOARD]     8
+# [ROUTER_WR_DRIVER]     8
+# [ROUTER_WR_MONITOR]     8
+# [ROUTER_WR_SCOREBOARD]     8
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : /home/cad/eda/MENTORGRAPHICS/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 2905 ns  Iteration: 54  Instance: /top
+# Saving coverage database on exit...
+# End time: 17:22:16 on Aug 08,2026, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 4
