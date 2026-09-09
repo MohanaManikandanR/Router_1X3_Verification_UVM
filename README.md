@@ -597,7 +597,7 @@ Possible future enhancements include:
 
 # 👨‍💻 Author
 
-**Mohana Manikandan R.**
+**Mohana Manikandan R**
 
 B.E. Electronics and Communication Engineering
 Chennai Institute of Technology
