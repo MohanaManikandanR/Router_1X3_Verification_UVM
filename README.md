@@ -317,7 +317,7 @@ This helps ensure that different packet sizes, destinations, and error condition
 
 ---
 
-# 🔍 SystemVerilog Assertions
+# 🔍 System Verilog Assertions
 
 SystemVerilog Assertions are used to verify protocol and timing behavior.
 
@@ -599,7 +599,3 @@ Chennai Institute of Technology
 * Low-Power VLSI
 
 ---
-
-# ⭐ Project Highlights
-
-> **A complete SystemVerilog/UVM-based verification environment for a 1×3 packet router, demonstrating constrained-random verification, functional coverage, assertions, scoreboard-based checking, virtual sequences, and regression testing using QuestaSim.**
