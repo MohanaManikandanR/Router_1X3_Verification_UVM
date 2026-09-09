@@ -585,7 +585,7 @@ Through this project, the following verification concepts were practiced:
 
 **Mohana Manikandan R**
 
-B.E. Electronics and Communication Engineering
+B.E. Electronics and Communication Engineering  
 Chennai Institute of Technology
 
 ### Areas of Interest
