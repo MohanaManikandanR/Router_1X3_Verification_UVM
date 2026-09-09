@@ -66,7 +66,7 @@ Each packet consists of:
                 ┌────────────────────────┐
                 │      8-BIT HEADER      │
                 ├────────────────┬───────┤
-                │  Packet Length │  Addr │
+                │ Payload Length │  Addr │
                 │    [7:2]       │ [1:0] │
                 └────────────────┴───────┘
                             │
@@ -215,7 +215,7 @@ Sequencer
    ↓
 Driver
    ↓
-DUT
+  DUT
 ```
 
 ---
@@ -263,7 +263,7 @@ The source and destination transactions are collected concurrently using `fork..
 After both transactions are available, the scoreboard performs:
 
 ```systemverilog
-compare(src_h, dst_h);
+compare(w_xtn, r_xtn);
 ```
 
 This verifies whether the packet was correctly routed.
@@ -438,7 +438,7 @@ join
 Open QuestaSim and compile the project using the Makefile.
 
 ```bash
-make sv_cmp_Questa
+make sv_cmp
 ```
 
 ---
@@ -578,20 +578,6 @@ Through this project, the following verification concepts were practiced:
 8. Debugging UVM factory and configuration issues.
 9. Running multiple tests through a Makefile.
 10. Generating and merging QuestaSim coverage databases.
-
----
-
-# 🚀 Future Improvements
-
-Possible future enhancements include:
-
-* Increasing functional coverage targets.
-* Adding more corner-case packet scenarios.
-* Adding protocol assertions for additional router conditions.
-* Improving scoreboard transaction matching.
-* Adding automated regression summaries.
-* Integrating the project with a CI/CD flow.
-* Adding more negative testing scenarios.
 
 ---
 
